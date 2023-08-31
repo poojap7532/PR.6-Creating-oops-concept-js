@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+</head>
+
+<body>
+    <!-- Make Banking System using oops approach -->
+    <!-- 1.CreateAccount -->
+    <!-- 2.ShowAccountDetails -->
+    <!-- 3.Deposite -->
+    <!-- 4.Withdraw  -->
+    <!-- 5.last Transection -->
+
+    <script>
+        class Bank {
+            constructor(myname, password, contact) {
+                this.name = myname;
+                this.mainbalance = newamount;
+                this.mobile = contact;
+            }
+            showdetails() {
+                console.log("Name: " + this.name + "Total Amount: " + this.mainbalance + "0. RS\nMobile :"
+                    + this.mobile)
+            }
+            deposite() {
+                let Amount = parseInt(prompt("enter deposite amount= "));
+                this.mainbalance += Amount;
+                console.log("amount " + Amount + "deposited successfully!")
+            }
+            withdraw() {
+                let Amount = parseInt(prompt("enter withdraw amount= "));
+                this.mainbalance += Amount;
+                console.log("amount " + Amount + "withdraw successfully!")
+            }
+            lastTransection(){
+                let Amount = parseInt(prompt("enter lastTransection amount= "));
+                this.mainbalance += Amount;
+                console.log("amount " + Amount + "lastTransection successfully!")
+            }
+        }
+        let myname = prompt("Name= ");
+        let newamount = parseInt(prompt("enter amount"));
+        let contact = prompt("enter contact");
+        const b = new Bank(myname, newamount, contact);
+        let choice = parseInt(prompt("1 - Deposite, 2 - Withdraw, 3 - lastTransection"));
+
+        switch (choice) {
+            case 1:
+                b.showdetails();
+                break;
+            case 2:
+                b.deposite();
+                break;
+            case 3:
+                b.withdraw();
+                break;
+            case 4:
+                b.lastTransection();
+                break;       
+            default:
+                alert("wrong choice!");
+        }
+    </script>
+</body>
+
+</html>
